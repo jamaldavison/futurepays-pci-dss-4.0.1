@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1402" viewBox="0 0 1440 1402" role="img" aria-labelledby="fpd-title fpd-desc" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+<title id="fpd-title">Payment Data Flow Diagram — FuturePays (fictional case study)</title>
+<desc id="fpd-desc">Illustrative PCI DSS v4.0.1 payment data flow for the fictional FuturePays e-commerce case study. Not a real production environment or evidence of compliance.</desc>
+<defs><marker id="fp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#9AF6CB"/></marker></defs>
+<rect width="1440" height="1402" fill="#080D18"/>
+<text x="48" y="62" font-size="26" fill="#F5F7FC" font-weight="700">Payment Data Flow Diagram</text>
+<text x="48" y="88" font-size="12.5" fill="#AAB6C8">FuturePays · fictional e-commerce case study · PCI DSS v4.0.1</text>
+<circle cx="54" cy="122" r="4" fill="#9AF6CB"/>
+<text x="66" y="126" font-size="11" fill="#9AF6CB">In PCI Scope · merchant systems</text>
+<circle cx="360" cy="122" r="4" fill="none" stroke="#AAB6C8" stroke-opacity="0.8"/>
+<text x="372" y="126" font-size="11" fill="#AAB6C8">Out of Scope · segmented corporate systems</text>
+<text x="700" y="126" font-size="11" fill="#AAB6C8">Provider systems are external, not exempt from PCI DSS</text>
+<text x="64" y="158" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">01 / PAYMENT JOURNEY</text>
+<text x="1028" y="158" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">02 / SUPPORTING SYSTEMS</text>
+<rect x="48" y="180" width="916" height="174" rx="10" fill="none" fill-opacity="0" stroke="#AAB6C8" stroke-opacity="0.45" stroke-dasharray="6 5"/>
+<text x="128" y="200" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">EXTERNAL CUSTOMER</text>
+<rect x="48" y="368" width="916" height="174" rx="10" fill="#9AF6CB" fill-opacity="0.04" stroke="#9AF6CB" stroke-opacity="0.5"/>
+<text x="128" y="388" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">FUTUREPAYS MERCHANT ENVIRONMENT · IN PCI SCOPE</text>
+<rect x="48" y="556" width="916" height="344" rx="10" fill="none" fill-opacity="0" stroke="#AAB6C8" stroke-opacity="0.45" stroke-dasharray="6 5"/>
+<text x="128" y="576" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">PAYMENT PROVIDER ENVIRONMENT · EXTERNAL TO FUTUREPAYS</text>
+<rect x="48" y="914" width="916" height="174" rx="10" fill="none" fill-opacity="0" stroke="#AAB6C8" stroke-opacity="0.45" stroke-dasharray="6 5"/>
+<text x="128" y="934" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">EXTERNAL PAYMENT NETWORK</text>
+<rect x="48" y="1102" width="916" height="174" rx="10" fill="#9AF6CB" fill-opacity="0.04" stroke="#9AF6CB" stroke-opacity="0.5"/>
+<text x="128" y="1122" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">FUTUREPAYS MERCHANT ENVIRONMENT · IN PCI SCOPE</text>
+<rect x="64" y="210" width="884" height="134" rx="10" fill="#101B2B" stroke="#AAB6C8" stroke-opacity="0.3" stroke-width="1"/>
+<circle cx="94" cy="248" r="16" fill="none" stroke="#AAB6C8" stroke-opacity="0.5"/>
+<text x="94" y="252" font-size="11" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">01</text>
+<text x="124" y="236" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">EXTERNAL CUSTOMER</text>
+<text x="124" y="258" font-size="15.5" fill="#F5F7FC" font-weight="600">Customer</text>
+<text x="124" y="280" font-size="12.5" fill="#AAB6C8">Shops online using a web browser.</text>
+<line x1="124" y1="300" x2="928" y2="300" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 310 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="314" font-size="11.5" fill="#9AF6CB">Browsing only</text>
+<rect x="64" y="398" width="884" height="134" rx="10" fill="#101B2B" stroke="#AAB6C8" stroke-opacity="0.3" stroke-width="1"/>
+<circle cx="94" cy="436" r="16" fill="none" stroke="#AAB6C8" stroke-opacity="0.5"/>
+<text x="94" y="440" font-size="11" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">02</text>
+<text x="124" y="424" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">IN PCI SCOPE · MERCHANT</text>
+<text x="124" y="446" font-size="15.5" fill="#F5F7FC" font-weight="600">FuturePays Web Store</text>
+<text x="124" y="468" font-size="12.5" fill="#AAB6C8">The customer clicks checkout and is redirected to the provider.</text>
+<line x1="124" y1="488" x2="928" y2="488" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 498 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="502" font-size="11.5" fill="#9AF6CB">Checkout request · no card entry</text>
+<rect x="64" y="586" width="884" height="134" rx="10" fill="#101B2B" stroke="#9AF6CB" stroke-opacity="0.55" stroke-width="1.4"/>
+<rect x="64" y="596" width="3" height="114" rx="1.5" fill="#9AF6CB"/>
+<circle cx="94" cy="624" r="16" fill="#9AF6CB" stroke="#9AF6CB" stroke-opacity="1"/>
+<text x="94" y="628" font-size="11" fill="#080D18" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">03</text>
+<text x="124" y="612" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">PROVIDER PCI ENVIRONMENT · EXTERNAL</text>
+<text x="124" y="634" font-size="15.5" fill="#F5F7FC" font-weight="600">Hosted Payment Page / Payment Service Provider</text>
+<text x="124" y="656" font-size="12.5" fill="#AAB6C8">Cardholder data is entered here, on a page hosted by a third-party payment provider—not FuturePays.</text>
+<line x1="124" y1="676" x2="928" y2="676" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 686 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="690" font-size="11.5" fill="#9AF6CB">Cardholder data entered here</text>
+<rect x="64" y="756" width="884" height="134" rx="10" fill="#101B2B" stroke="#AAB6C8" stroke-opacity="0.3" stroke-width="1"/>
+<circle cx="94" cy="794" r="16" fill="none" stroke="#AAB6C8" stroke-opacity="0.5"/>
+<text x="94" y="798" font-size="11" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">04</text>
+<text x="124" y="782" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">PROVIDER PCI ENVIRONMENT · EXTERNAL</text>
+<text x="124" y="804" font-size="15.5" fill="#F5F7FC" font-weight="600">Payment Gateway / Processor</text>
+<text x="124" y="826" font-size="12.5" fill="#AAB6C8">Receives the payment request and sends it for processing.</text>
+<line x1="124" y1="846" x2="928" y2="846" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 856 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="860" font-size="11.5" fill="#9AF6CB">Payment processing</text>
+<rect x="64" y="944" width="884" height="134" rx="10" fill="#101B2B" stroke="#AAB6C8" stroke-opacity="0.3" stroke-width="1"/>
+<circle cx="94" cy="982" r="16" fill="none" stroke="#AAB6C8" stroke-opacity="0.5"/>
+<text x="94" y="986" font-size="11" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">05</text>
+<text x="124" y="970" font-size="10" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">EXTERNAL PAYMENT NETWORK</text>
+<text x="124" y="992" font-size="15.5" fill="#F5F7FC" font-weight="600">Card Network / Issuer Response</text>
+<text x="124" y="1014" font-size="12.5" fill="#AAB6C8">The card network and issuing bank return approval or decline through the provider.</text>
+<line x1="124" y1="1034" x2="928" y2="1034" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 1044 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="1048" font-size="11.5" fill="#9AF6CB">Approval or decline</text>
+<rect x="64" y="1132" width="884" height="134" rx="10" fill="#101B2B" stroke="#AAB6C8" stroke-opacity="0.3" stroke-width="1"/>
+<circle cx="94" cy="1170" r="16" fill="none" stroke="#AAB6C8" stroke-opacity="0.5"/>
+<text x="94" y="1174" font-size="11" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" text-anchor="middle">06</text>
+<text x="124" y="1158" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">IN PCI SCOPE · ASSUMED MERCHANT BOUNDARY</text>
+<text x="124" y="1180" font-size="15.5" fill="#F5F7FC" font-weight="600">FuturePays Order System</text>
+<text x="124" y="1202" font-size="12.5" fill="#AAB6C8">Receives only payment results. Stores order status and transaction result—not full card numbers.</text>
+<line x1="124" y1="1222" x2="928" y2="1222" stroke="#AAB6C8" stroke-opacity="0.25"/>
+<path d="M124 1232 l3.5 3.5 l6.5 -7" fill="none" stroke="#9AF6CB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="142" y="1236" font-size="11.5" fill="#9AF6CB">Payment results only · no full card numbers</text>
+<line x1="104" y1="352" x2="104" y2="390" stroke="#9AF6CB" stroke-width="1.6" marker-end="url(#fp-arrow)"/>
+<text x="120" y="366" font-size="10.5" fill="#AAB6C8">Customer opens the store</text>
+<line x1="104" y1="540" x2="104" y2="578" stroke="#9AF6CB" stroke-width="1.6" marker-end="url(#fp-arrow)"/>
+<text x="120" y="554" font-size="10.5" fill="#AAB6C8">Checkout redirect to third-party page</text>
+<line x1="104" y1="728" x2="104" y2="748" stroke="#9AF6CB" stroke-width="1.6" marker-end="url(#fp-arrow)"/>
+<text x="120" y="742" font-size="10.5" fill="#AAB6C8">Secure payment request</text>
+<line x1="104" y1="898" x2="104" y2="936" stroke="#9AF6CB" stroke-width="1.6" marker-end="url(#fp-arrow)"/>
+<text x="120" y="912" font-size="10.5" fill="#AAB6C8">Authorization request</text>
+<line x1="104" y1="1086" x2="104" y2="1124" stroke="#9AF6CB" stroke-width="1.6" marker-end="url(#fp-arrow)"/>
+<text x="120" y="1100" font-size="10.5" fill="#AAB6C8">Provider relays the payment result</text>
+<rect x="1012" y="180" width="380" height="100" rx="10" fill="#101B2B" stroke="#9AF6CB" stroke-opacity="0.25"/>
+<text x="1028" y="206" font-size="13" fill="#F5F7FC" font-weight="600">Security logging / monitoring</text>
+<text x="1028" y="230" font-size="9.5" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">IN PCI SCOPE</text>
+<text x="1028" y="246" font-size="11.5" fill="#AAB6C8">Monitors the store, orders and admin activity. Logs</text>
+<text x="1028" y="262" font-size="11.5" fill="#AAB6C8">exclude cardholder data.</text>
+<rect x="1012" y="294" width="380" height="100" rx="10" fill="#101B2B" stroke="#9AF6CB" stroke-opacity="0.25"/>
+<text x="1028" y="320" font-size="13" fill="#F5F7FC" font-weight="600">Administrative users</text>
+<text x="1028" y="344" font-size="9.5" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">IN PCI SCOPE</text>
+<text x="1028" y="360" font-size="11.5" fill="#AAB6C8">Authorized staff manage payment-related systems using</text>
+<text x="1028" y="376" font-size="11.5" fill="#AAB6C8">restricted access and MFA.</text>
+<rect x="1012" y="408" width="380" height="100" rx="10" fill="#101B2B" stroke="#9AF6CB" stroke-opacity="0.25"/>
+<text x="1028" y="434" font-size="13" fill="#F5F7FC" font-weight="600">Firewall / security boundary</text>
+<text x="1028" y="458" font-size="9.5" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">IN PCI SCOPE</text>
+<text x="1028" y="474" font-size="11.5" fill="#AAB6C8">Limits approved connections and separates</text>
+<text x="1028" y="490" font-size="11.5" fill="#AAB6C8">payment-related systems from corporate systems.</text>
+<rect x="1012" y="522" width="380" height="100" rx="10" fill="none" stroke="#AAB6C8" stroke-opacity="0.5" stroke-dasharray="6 5"/>
+<text x="1028" y="548" font-size="13" fill="#F5F7FC" font-weight="600">Corporate systems</text>
+<text x="1028" y="572" font-size="9.5" fill="#AAB6C8" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">OUT OF SCOPE · ASSUMED</text>
+<text x="1028" y="588" font-size="11.5" fill="#AAB6C8">Separate office systems with no cardholder data and no</text>
+<text x="1028" y="604" font-size="11.5" fill="#AAB6C8">access that could affect payment security.</text>
+<text x="48" y="1310" font-size="10" fill="#9AF6CB" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" letter-spacing="1">ILLUSTRATIVE PORTFOLIO MODEL</text>
+<text x="48" y="1330" font-size="11.5" fill="#AAB6C8">Simplified fictional portfolio diagram—not a real production environment, a validated scope assessment or evidence of compliance. Arrows show the logical sequence; the provider relays the issuer response to</text>
+<text x="48" y="1347" font-size="11.5" fill="#AAB6C8">FuturePays.</text>
+</svg>
