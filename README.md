@@ -1,5 +1,8 @@
 # FuturePays | PCI DSS v4.0.1 Audit-Readiness Case Study
 
+**Recruiter quick start:** [Read the concise case study](CASE_STUDY.md) · [View the living résumé](https://jamal-davison-live-resume.lovable.app/)
+
+
 **Jamal Davison · Cybersecurity / GRC Portfolio**
 
 > **Fictional educational scenario.** This repository demonstrates assessment planning and documentation, not a completed PCI DSS assessment or certified payment environment. Technical validation, evidence collection, and remediation testing have not been performed.
